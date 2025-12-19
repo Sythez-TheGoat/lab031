@@ -1,0 +1,65 @@
+
+name: Feature Request
+description: Submit a new feature request
+title: "Feature: "
+labels: [bug]
+projects: ["octo-org/1", "octo-org/44"]
+assignees: [octocat]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Contact Details
+  
+  - type: input
+    id: contact
+    attributes:
+      label: What is your name?
+      placeholder: ex. Sertha Taweewattana
+    validations:
+      required: false
+  
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Type of request?
+      description: Select the type of your request
+      options:
+        - New Feature
+        - Enhancement
+        - Bug Fix
+        - Documentation
+        - Other
+      default: 0
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: os
+    attributes:
+      label: What is the OS which you want to suggest?
+      description: Selections
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - iOS
+        - Android
+        - Other
+    validations:
+      required: false
+  
+  - type: textarea
+    id: details
+    attributes:
+      label: What are the details of your suggestion?
+      description: Explain what do you want
+      placeholder: Feature details!
+    validations:
+      required: true
